@@ -10,18 +10,9 @@ import {
 } from 'grommet';
 import { Menu, FormClose } from 'grommet-icons';
 
-const theme = {
-  global: {
-    colors: {
-      brand: '#357DA9',
-    },
-    font: {
-      family: 'Roboto',
-      size: '18px',
-      height: '20px',
-    },
-  },
-};
+import { theme } from './theme';
+import Form from './Form';
+import Card from './Card';
 
 const AppBar = (props) => (
   <Box
@@ -29,9 +20,8 @@ const AppBar = (props) => (
     direction="row"
     align="center"
     justify="between"
-    background="brand"
+    background="#f7fafd"
     pad={{ left: 'medium', right: 'small', vertical: 'small' }}
-    elevation="medium"
     style={{ zIndex: '1' }}
     {...props}
   />
@@ -93,8 +83,12 @@ function App() {
                   </Box>
                 </Layer>
               )}
-              <Box flex align="center" justify="center">
-                app body
+              <Box flex pad="medium">
+                <Form />
+
+                <hr />
+                <Heading level={3}>Card</Heading>
+                <Card />
               </Box>
             </Box>
           </Box>
