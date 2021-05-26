@@ -34,7 +34,7 @@ function App() {
     <Grommet theme={theme} themeMode="dark" full>
       <ResponsiveContext.Consumer>
         {(size) => (
-          <Box fill>
+          <Box>
             <AppBar>
               <Heading level="3" margin="none">
                 <Button
@@ -45,7 +45,7 @@ function App() {
               </Heading>
             </AppBar>
 
-            <Box direction="row" flex overflow={{ horizontal: 'hidden' }}>
+            <Box direction="row">
               {!showSidebar || size !== 'small' ? (
                 <Collapsible direction="horizontal" open={showSidebar}>
                   <Box
@@ -83,7 +83,7 @@ function App() {
                   </Box>
                 </Layer>
               )}
-              <Box flex pad="medium">
+              <Box pad="medium">
                 <Form />
 
                 <hr />
